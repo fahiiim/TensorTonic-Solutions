@@ -6,6 +6,8 @@ def word_count_dict(sentences):
 
     for sentence in sentences:
         for word in sentence:
-            Dict[word] = Dict.get(word, 0) + 1
-
+            if word in Dict:
+                Dict[word] += 1
+            else:
+                Dict[word] = 1
     return Dict
